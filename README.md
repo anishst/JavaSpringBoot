@@ -6,8 +6,11 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 
 1. use IDE or use command: ```mvnw spring-boot:run``` from project root
 
-port currently set to 8081: ```src/main/resources/application.properties```
+**NOTE:** port currently set to 8081 in: ```src/main/resources/application.properties```
 
+## How to run in Docker
+1. build image: ```docker build -t myspringboot .```
+2. run app: ```docker run -p 8080:8081 myspringboot```
 ## To Do
 
 - [x] [setup IntelliJ IDE](https://www.youtube.com/watch?v=H_XxH66lm3U&t=84s)
@@ -16,7 +19,7 @@ port currently set to 8081: ```src/main/resources/application.properties```
 - [ ] add basic junit tests
 - [ ] add cucumber tests/reports
 - [ ] add selenium tests 
-- [ ] [Dockerize app](https://spring.io/guides/gs/spring-boot-docker/)
+- [x] [Dockerize app](https://spring.io/guides/gs/spring-boot-docker/)
 - [ ] use Jenkinsfile
 
 
