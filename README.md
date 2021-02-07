@@ -18,6 +18,8 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
     - [Video Example](https://www.youtube.com/watch?v=df7Dso9q700&t=565s)
 - [x] add basic junit tests
 - [ ] add cucumber tests/reports
+    - [x] Install Cucumber plugin in Idea IDE
+    - [ ] create test runner 
 - [ ] add selenium tests 
 - [x] [Dockerize app](https://spring.io/guides/gs/spring-boot-docker/)
 - [ ] use Jenkinsfile
@@ -28,3 +30,4 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 - https://stackoverflow.com/questions/27767264/how-to-dockerize-maven-project-and-how-many-ways-to-accomplish-it
 - https://www.youtube.com/watch?v=HaGeSq-SB9E
 - https://spring.io/guides/gs/testing-web/
+- idea plugins for cucumber : https://www.jetbrains.com/help/idea/testing-frameworks.html
