@@ -16,5 +16,5 @@ port currently set to 8081: ```src/main/resources/application.properties```
 - [ ] add basic junit tests
 - [ ] add cucumber tests/reports
 - [ ] add selenium tests 
-- [ ] Dockerize app
+- [ ] [Dockerize app](https://spring.io/guides/gs/spring-boot-docker/)
 - [ ] use Jenkinsfile
