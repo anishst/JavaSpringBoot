@@ -2,7 +2,7 @@
 
 Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 
-# How to Run
+## How to Run locally
 
 1. use IDE or use command: ```mvnw spring-boot:run``` from project root
 
@@ -16,7 +16,7 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 - [x] [setup IntelliJ IDE](https://www.youtube.com/watch?v=H_XxH66lm3U&t=84s)
 - [x] create a basic application using [spring initializer](https://start.spring.io/)
     - [Video Example](https://www.youtube.com/watch?v=df7Dso9q700&t=565s)
-- [ ] add basic junit tests
+- [x] add basic junit tests
 - [ ] add cucumber tests/reports
 - [ ] add selenium tests 
 - [x] [Dockerize app](https://spring.io/guides/gs/spring-boot-docker/)
@@ -27,3 +27,4 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 
 - https://stackoverflow.com/questions/27767264/how-to-dockerize-maven-project-and-how-many-ways-to-accomplish-it
 - https://www.youtube.com/watch?v=HaGeSq-SB9E
+- https://spring.io/guides/gs/testing-web/
