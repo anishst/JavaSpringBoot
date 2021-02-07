@@ -23,7 +23,7 @@ public class JavaSpringBootApplication {
 
 	@RequestMapping("/")
 	public String home() {
-		return "<h1>Spring Boot App!</h1>	";
+		return "<h1>Spring Boot App Updated!</h1>	";
 	}
 
 }

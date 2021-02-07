@@ -18,3 +18,9 @@ port currently set to 8081: ```src/main/resources/application.properties```
 - [ ] add selenium tests 
 - [ ] [Dockerize app](https://spring.io/guides/gs/spring-boot-docker/)
 - [ ] use Jenkinsfile
+
+
+## Resources
+
+- https://stackoverflow.com/questions/27767264/how-to-dockerize-maven-project-and-how-many-ways-to-accomplish-it
+- https://www.youtube.com/watch?v=HaGeSq-SB9E
