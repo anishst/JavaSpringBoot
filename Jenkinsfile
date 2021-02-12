@@ -5,6 +5,9 @@ pipeline {
     stages {
 
         stage('Run App '){
+            agent {
+                docker { image 'maven:3-alpine' }
+            }
             steps {
                 dir("${env.WORKSPACE}") {
                     echo "Launching Spring Boot app...."
@@ -17,6 +20,9 @@ pipeline {
         }
 
          stage('Test'){
+             agent {
+                 docker { image 'maven:3-alpine' }
+             }
             steps {
                 dir("${env.WORKSPACE}") {
                     echo "Running Java Cucumber Tests...."
