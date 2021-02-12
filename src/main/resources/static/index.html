@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>User Registration for Testing COE</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Registration</h1>
+    <form action="#" th:action"@{/landing}" th:object="${user}" method="post">
+    <span class="error" id="usernameError" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"/>
+    <pre>Username:		<input id="usernameInput" type="text" th:field="*{username}" th:classappend="${#fields.hasErrors('username') ? 'error' : 'normal'}"/></pre>
+    <span class="error" id="passwordError" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"/>
+    <pre>Password: 	        <input id="passwordInput" type="password" th:field="*{password}" th:classappend="${#fields.hasErrors('password') ? 'error' : 'normal'}"/></pre>
+    <span class="error" id="nameError" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"/>
+    <pre>Name:			<input id="nameInput" type="text" th:field="*{name}" th:classappend="${#fields.hasErrors('name') ? 'error' : 'normal'}"/></pre>
+    <span class="error" id="emailError" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"/>
+    <pre>Email:			<input id="emailInput" type="text" th:field="*{email}" th:classappend="${#fields.hasErrors('email') ? 'error' : 'normal'}"/></pre>
+    <pre>Phone:			<input id="phoneInput" type="text" th:field="*{phone}"/></pre>
+    <pre>Preference:	   	<select name="preference" id="preference" style="display:inline;"><option value="first">First</option><option value="second">Second</option><option value="third">Third</option></select></pre>
+    <pre>Preferred Contact:     <input type="radio" id="contactEmail" name="choice" value="emailContact"><label for="contactEmail">Email</label> <input type="radio" id="contactPhone" name="choice" value="phone"><label for="contactPhone">Phone</label> <input type="radio" id="contactOther" name="choice" value="other"><label for="contactOther">Other</label></pre><br/><br/>
+    <button id="submit" value="Submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

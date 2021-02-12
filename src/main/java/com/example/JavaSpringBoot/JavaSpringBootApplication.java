@@ -21,9 +21,5 @@ public class JavaSpringBootApplication {
 		return String.format("Hello %s!", name);
 	}
 
-	@RequestMapping("/")
-	public String home() {
-		return "<h1>Spring Boot App Updated!</h1>	";
-	}
 
 }

@@ -29,5 +29,6 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 
 - https://stackoverflow.com/questions/27767264/how-to-dockerize-maven-project-and-how-many-ways-to-accomplish-it
 - https://www.youtube.com/watch?v=HaGeSq-SB9E
-- https://spring.io/guides/gs/testing-web/
 - idea plugins for cucumber : https://www.jetbrains.com/help/idea/testing-frameworks.html
+- [Serving Web Content](https://spring.io/guides/gs/serving-web-content/)
+- [Testing Web](https://spring.io/guides/gs/testing-web/)

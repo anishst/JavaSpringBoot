@@ -20,7 +20,7 @@ public class HttpRequestTest {
 
     @Test
     public void greetingShouldReturnDefaultMessage() throws Exception {
-        assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",
-                String.class)).contains("Spring Boot App");
+        assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/hello",
+                String.class)).contains("Hello");
     }
 }
