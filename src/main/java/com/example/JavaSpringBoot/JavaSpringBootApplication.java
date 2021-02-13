@@ -21,5 +21,10 @@ public class JavaSpringBootApplication {
 		return String.format("Hello %s!", name);
 	}
 
+	@RequestMapping("/newpage")
+	public String newpage() {
+		return "I am a new page";
+	}
+
 
 }
