@@ -14,6 +14,7 @@ pipeline {
                     sh "nohup mvn spring-boot:run &"
                     sh "sleep 10"
                     echo "App Launched"
+                    sh "curl http://localhost:8080"
                     sh "curl http://localhost:8081"
                  }
             }
