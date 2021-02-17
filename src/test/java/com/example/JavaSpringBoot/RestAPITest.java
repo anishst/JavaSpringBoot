@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 // https://spring.io/guides/gs/testing-web/
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class HttpRequestTest {
+public class RestAPITest {
 
     @LocalServerPort
     private int port;
@@ -24,6 +24,7 @@ public class HttpRequestTest {
     public void greetingShouldReturnDefaultMessage() throws Exception {
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/hello",
                 String.class)).contains("Hello");
+        System.out.println("*****  Verified Hello Endpoint is working ******");
     }
 
     @Test

@@ -31,4 +31,6 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 - https://www.youtube.com/watch?v=HaGeSq-SB9E
 - idea plugins for cucumber : https://www.jetbrains.com/help/idea/testing-frameworks.html
 - [Serving Web Content](https://spring.io/guides/gs/serving-web-content/)
-- [Testing Web](https://spring.io/guides/gs/testing-web/)
+- Testing
+  - [Testing Web](https://spring.io/guides/gs/testing-web/)
+  - [How to Test a Spring Boot Application](https://stackabuse.com/how-to-test-a-spring-boot-application/)
