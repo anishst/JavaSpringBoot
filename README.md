@@ -20,9 +20,10 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 - [ ] add cucumber tests/reports
     - [x] Install Cucumber plugin in Idea IDE
     - [ ] create test runner 
-- [ ] add selenium tests 
+- [x] add selenium tests
 - [x] [Dockerize app](https://spring.io/guides/gs/spring-boot-docker/)
 - [ ] use Jenkinsfile
+- [ ] solve issue with mvn test not picking up cucumber tests
 
 
 ## Resources
@@ -34,3 +35,9 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 - Testing
   - [Testing Web](https://spring.io/guides/gs/testing-web/)
   - [How to Test a Spring Boot Application](https://stackabuse.com/how-to-test-a-spring-boot-application/)
+- cucumber spring boot repos:
+  - [guide](https://medium.com/@kanhu.aum/spring-boot-cucumber-bdd-c077666c9c68)
+  - [cucum sald](https://github.com/danieldestro/cucumber-salad)
+  - [examp](https://github.com/cucumber/cucumber-jvm/tree/main/examples/java-calculator-testng)
+- Video Series
+  - [EA - Spring Boot Testing ](https://www.youtube.com/watch?v=cG6ZLiRxn1M&list=PL6tu16kXT9PrDr6kMGQ-CgnvCsFxrq1eS)
