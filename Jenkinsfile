@@ -28,13 +28,14 @@ pipeline {
         }
 
          stage('Web Test'){
-//              agent {
-//                  docker { image 'maven:3-alpine' }
-//              }
+             agent {
+                 docker { image 'selenium/standalone-chrome:latest' }
+             }
             steps {
                 dir("${env.WORKSPACE}") {
                     echo "Running Java Cucumber Tests...."
                     sh "pwd"
+                    sh "curl http://chrome:4444/wd/hub"
                     sh "mvn test -Dtest=WebTests"
 
                  }
