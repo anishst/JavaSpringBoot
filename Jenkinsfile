@@ -6,20 +6,19 @@ pipeline {
     tools {
         maven 'Maven 3'   // maven should be setup as a tool in Jenkins
     }
+
+    triggers {
+        //     Poll scm every 2 mins
+        pollSCM 'H/2 * * * *'
+    }
     stages {
 
-        stage('Run App '){
-//             agent {
-//                 docker { image 'maven:3-alpine' }
-//             }
+        stage('Build App '){
             steps {
                 dir("${env.WORKSPACE}") {
                     sh "mvn --version"
-                    echo "Launching Spring Boot app...."
-                    sh "nohup mvn spring-boot:run &"
-                    sh "sleep 10"
-                    echo "App Launched"
-                    sh "curl http://localhost:8081"
+                    echo "Building App app...."
+                    sh "mvn install -Dmaven.test.skip=true"
                  }
             }
         }
