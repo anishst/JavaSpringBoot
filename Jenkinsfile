@@ -46,8 +46,8 @@ pipeline {
                     dir("${env.WORKSPACE}") {
                         sh "docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome:latest"
                         echo "Running Web Tests...."
-                        sh "pwd"
-                        sh "curl http://localhost:4444/wd/hub"
+                        sh "sleep 10"
+//                         sh "curl http://localhost:4444/wd/hub"
                         sh "mvn test -Dtest=WebTests"
 
                      }
