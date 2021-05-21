@@ -22,6 +22,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 class WebTests {
+
+	WebDriver driver = null;
+
 	@LocalServerPort
 	private int port;
 
@@ -55,7 +58,7 @@ class WebTests {
 	@Test
 	public void user_is_on_application_homepage() throws InterruptedException {
 
-		WebDriver driver = null;
+
 		System.out.println("Opening Browser...");
 		System.out.println("Project Path: " + System.getProperty("user.dir"));
 		//driver setup
