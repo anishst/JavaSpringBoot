@@ -1,6 +1,7 @@
 pipeline {
     // https://github.boozallencsn.com/krajewski-frank/jenkins-examples/blob/mvn-ssh-release/Jenkinsfile
-    agent { dockerfile true }
+//     agent { dockerfile true }
+    agent any
 
     tools {
         maven 'Maven 3'   // maven should be setup as a tool in Jenkins
