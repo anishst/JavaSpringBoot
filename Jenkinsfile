@@ -2,6 +2,9 @@ pipeline {
     // https://github.boozallencsn.com/krajewski-frank/jenkins-examples/blob/mvn-ssh-release/Jenkinsfile
     agent { dockerfile true }
 
+    tools {
+        maven 'Maven 3'   // maven should be setup as a tool in Jenkins
+    }
     stages {
 
         stage('Run App '){
@@ -10,6 +13,7 @@ pipeline {
 //             }
             steps {
                 dir("${env.WORKSPACE}") {
+                    sh "mvn --version"
                     echo "Launching Spring Boot app...."
                     sh "nohup mvn spring-boot:run &"
                     sh "sleep 10"
