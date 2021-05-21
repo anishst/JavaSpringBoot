@@ -1,6 +1,6 @@
 # Java Spring Boot
 
-![example workflow](https://github.com/anishst/JavaSpringBoot/actions/workflows/maven.yml/badge.svg)
+[![example workflow](https://github.com/anishst/JavaSpringBoot/actions/workflows/maven.yml/badge.svg)](https://github.com/anishst/JavaSpringBoot/actions)
 
 Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 
