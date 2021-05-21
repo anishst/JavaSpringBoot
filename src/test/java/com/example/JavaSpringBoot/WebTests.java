@@ -8,10 +8,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -56,7 +59,7 @@ class WebTests {
 	}
 
 	@Test
-	public void user_is_on_application_homepage() throws InterruptedException {
+	public void user_is_on_application_homepage() throws InterruptedException, MalformedURLException {
 
 
 		System.out.println("Opening Browser...");
@@ -68,12 +71,16 @@ class WebTests {
 		}
 		else {
 			// use the chrome driver in docker instance
-			WebDriverManager.chromedriver().setup();
+			// testing remote webdriver - us this to launch docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome:latest
+			System.out.println("Connecting to Hub");
+			String nodeURL;
+			nodeURL = "http://localhost:4444/wd/hub";
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--no-sandbox");
 			options.addArguments("--headless");
-			options.addArguments("--disable-dev-shm-usage");
-			options.addArguments("--disable-gpu");
+			driver = new RemoteWebDriver(new URL(nodeURL), options);
+			System.out.println("Hub connection is good!");
+
 			driver = new ChromeDriver(options);
 		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
