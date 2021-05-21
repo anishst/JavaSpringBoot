@@ -22,4 +22,4 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Build with Maven
-      run:  mvn -B package --file pom.xml #mvn test -Dtest=RestAPITest
+      run:   mvn test -Dtest=RestAPITest #mvn -B package --file pom.xml
