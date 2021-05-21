@@ -1,5 +1,7 @@
 # Java Spring Boot
 
+![example workflow](https://github.com/anishst/JavaSpringBoot/actions/workflows/maven.yml/badge.svg)
+
 Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 
 ## How to Run locally
