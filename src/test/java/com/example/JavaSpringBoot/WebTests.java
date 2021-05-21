@@ -1,11 +1,13 @@
 package com.example.JavaSpringBoot;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
@@ -57,7 +59,16 @@ class WebTests {
 		System.out.println("Opening Browser...");
 		System.out.println("Project Path: " + System.getProperty("user.dir"));
 		//driver setup
-		driver = new ChromeDriver(); // assumes chrome driver is setup and is in Path var
+		if (System.getenv("CLOUD_RUN_FLAG") == null) {
+			driver = new ChromeDriver();
+		}
+		else {
+			// use the chrome driver in docker instance
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--no-sandbox");
+			options.addArguments("--headless");
+			driver = new ChromeDriver(options);
+		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().window().maximize();

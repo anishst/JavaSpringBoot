@@ -7,6 +7,10 @@ pipeline {
         maven 'Maven 3'   // maven should be setup as a tool in Jenkins
     }
 
+        environment {
+            CLOUD_RUN_FLAG = "YES"
+        }
+
     triggers {
         //     Poll scm every 2 mins
         pollSCM 'H/2 * * * *'
@@ -23,7 +27,7 @@ pipeline {
             }
         }
 
-         stage('Test'){
+         stage('Web Test'){
 //              agent {
 //                  docker { image 'maven:3-alpine' }
 //              }
@@ -31,7 +35,7 @@ pipeline {
                 dir("${env.WORKSPACE}") {
                     echo "Running Java Cucumber Tests...."
                     sh "pwd"
-                    sh "mvn test"
+                    sh "mvn test -Dtest=WebTests"
 
                  }
             }
