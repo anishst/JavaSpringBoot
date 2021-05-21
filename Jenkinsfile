@@ -27,18 +27,30 @@ pipeline {
             }
         }
 
+         stage('Unit Tests'){
+            steps {
+                dir("${env.WORKSPACE}") {
+                    echo "Running Unit Tests...."
+                    sh "mvn test -Dtest=RestAPITest"
+
+                 }
+            }
+        }
+        // not working on cloud run
          stage('Web Test'){
              agent {
                  docker { image 'selenium/standalone-chrome:latest' }
              }
             steps {
-                dir("${env.WORKSPACE}") {
-                    echo "Running Web Tests...."
-                    sh "pwd"
-                    sh "curl http://localhost:4444/wd/hub"
-                    sh "mvn test -Dtest=WebTests"
+                catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+                    dir("${env.WORKSPACE}") {
+                        echo "Running Web Tests...."
+                        sh "pwd"
+                        sh "curl http://localhost:4444/wd/hub"
+                        sh "mvn test -Dtest=WebTests"
 
-                 }
+                     }
+                }
             }
         }
         stage('Deploy') {
