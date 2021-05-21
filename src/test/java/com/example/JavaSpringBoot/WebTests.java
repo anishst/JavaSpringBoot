@@ -60,10 +60,12 @@ class WebTests {
 		System.out.println("Project Path: " + System.getProperty("user.dir"));
 		//driver setup
 		if (System.getenv("CLOUD_RUN_FLAG") == null) {
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
 		else {
 			// use the chrome driver in docker instance
+			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--no-sandbox");
 			options.addArguments("--headless");

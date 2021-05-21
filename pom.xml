@@ -59,6 +59,7 @@
 			<version>${selenium.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<!--				https://github.com/bonigarcia/webdrivermanager-->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
@@ -73,6 +74,8 @@
 			<version>4.2.0</version>
 			<scope>test</scope>
 		</dependency>
+
+
 
 	</dependencies>
 

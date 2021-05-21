@@ -32,7 +32,10 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 - [ ] use Jenkinsfile
 - [ ] Jmeter tests
 - [ ] solve issue with mvn test not picking up cucumber tests
-- [ ] add github actions
+- [x] add github actions
+- [ ] use GitHub Webhooks
+- [x] added webdriver manager for managing driver instances: https://github.com/bonigarcia/webdrivermanager
+
 ## Dependency Injection
 - [Spring IOC Container](https://docs.spring.io/spring-framework/docs/3.1.x/spring-framework-reference/html/beans.html)
   - @Autowired
@@ -53,3 +56,27 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 - Video Series
   - [EA - Spring Boot Testing ](https://www.youtube.com/watch?v=cG6ZLiRxn1M&list=PL6tu16kXT9PrDr6kMGQ-CgnvCsFxrq1eS)
     - [Github](https://github.com/executeautomation/SpringBootSelenium)
+
+
+#### Reference Documentation
+For further reference, please consider the following sections:
+
+* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
+* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.3.5.RELEASE/maven-plugin/reference/html/)
+* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.3.5.RELEASE/maven-plugin/reference/html/#build-image)
+* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.3.5.RELEASE/reference/htmlsingle/#using-boot-devtools)
+* [Spring Web](https://docs.spring.io/spring-boot/docs/2.3.5.RELEASE/reference/htmlsingle/#boot-features-developing-web-applications)
+
+#### Guides
+The following guides illustrate how to use some features concretely:
+
+* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
+* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
+* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
+
+#### Report Options
+- [cucumber-reporting](https://github.com/damianszczepanik/cucumber-reporting) plugin
+
+#### Video Tutorials
+
+- [Javan Cucumber Video Series](https://www.youtube.com/watch?v=4e9vhX7ZuCw&t=1697s)
