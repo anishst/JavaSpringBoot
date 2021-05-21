@@ -73,6 +73,7 @@ class WebTests {
 			options.addArguments("--no-sandbox");
 			options.addArguments("--headless");
 			options.addArguments("--disable-dev-shm-usage");
+			options.addArguments("--disable-gpu");
 			driver = new ChromeDriver(options);
 		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
