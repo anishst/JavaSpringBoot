@@ -33,9 +33,9 @@ pipeline {
              }
             steps {
                 dir("${env.WORKSPACE}") {
-                    echo "Running Java Cucumber Tests...."
+                    echo "Running Web Tests...."
                     sh "pwd"
-                    sh "curl http://chrome:4444/wd/hub"
+                    sh "curl http://localhost:4444/wd/hub"
                     sh "mvn test -Dtest=WebTests"
 
                  }
