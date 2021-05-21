@@ -1,7 +1,5 @@
 package com.example.JavaSpringBoot;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
@@ -27,14 +25,4 @@ public class RestAPITest {
         System.out.println("*****  Verified Hello Endpoint is working ******");
     }
 
-    @Test
-    public void simpleSeleniumTest() {
-        WebDriver driver = null;
-        driver = new ChromeDriver();
-        driver.get("http://localhost:" + port);
-        driver.navigate().to("http://localhost:" + port + "/hello");
-        System.out.println("Inside selenium test");
-        driver.quit();
-
-    }
 }

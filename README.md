@@ -11,6 +11,11 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 ## How to run in Docker
 1. build image: ```docker build -t myspringboot .```
 2. run app: ```docker run -p 8080:8081 myspringboot```
+
+## Run Tests
+
+- run REST API Tests only: ```mvn test -Dtest=RestAPITest```
+- run Cucumber tests: ```mvn test```
 ## To Do
 
 - [x] [setup IntelliJ IDE](https://www.youtube.com/watch?v=H_XxH66lm3U&t=84s)
@@ -23,8 +28,9 @@ Basic [Java Spring Boot](https://spring.io/projects/spring-boot) application
 - [x] add selenium tests
 - [x] [Dockerize app](https://spring.io/guides/gs/spring-boot-docker/)
 - [ ] use Jenkinsfile
+- [ ] Jmeter tests
 - [ ] solve issue with mvn test not picking up cucumber tests
-
+- [ ] add github actions
 ## Dependency Injection
 - [Spring IOC Container](https://docs.spring.io/spring-framework/docs/3.1.x/spring-framework-reference/html/beans.html)
   - @Autowired
