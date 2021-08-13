@@ -3,6 +3,7 @@ package StepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +21,9 @@ public class GoogleSearchSteps {
         System.out.println("Opening Browser...");
         System.out.println("Project Path: " + System.getProperty("user.dir"));
         //driver setup
-        driver = new ChromeDriver(); // assumes chrome driver is setup and is in Path var
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        // driver = new ChromeDriver(); // assumes chrome driver is setup and is in Path var
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
         driver.manage().window().maximize();
